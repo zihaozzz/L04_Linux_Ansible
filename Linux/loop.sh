@@ -19,7 +19,7 @@ DURATION=2
 COUNT=1
 ATTEMPTS=5
 while [ $COUNT -lt $ATTEMPTS ]; do
-    echo "Waiting ${DURATION} seconds for process to complete. This is while loop attempt number $((COUNT))"
+    echo "While loop attempt $COUNT: Waiting ${DURATION} seconds..."
     sleep "$DURATION"
     COUNT=$((COUNT+1))
 done
