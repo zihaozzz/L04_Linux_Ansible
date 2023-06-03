@@ -21,7 +21,7 @@ cd ../
 pwd
 
 echo "#7. go back to the current folder"
-cd wk4_bash_basics
+cd -
 pwd
 
 echo "#8. create path to a folder"
@@ -45,4 +45,4 @@ echo "#12. Less: load a file part by part/load file faster"
 less report.txt
 
 echo "#13. Dmesg start at first occurrence of pattern “failure” in the file"
-dmesg | less -p "failure"
+dmesg | less -p "hv_pci"
