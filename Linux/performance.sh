@@ -32,12 +32,12 @@ vmstat -s
 # Disk
 df -h
 
-fdisk -l
+# fdisk -l
 
-# IO
-iostat
+# # IO
+# iostat
 
-atop
+# atop
 
 
 #Network
@@ -49,5 +49,3 @@ ifconfig
 /etc/hosts
 # Specify network configuration and devices. eg. Static IP and info, DHCP, etc.
 less /etc/network/interfaces
-
-# http://www.yolinux.com/TUTORIALS/LinuxTutorialNetworking.html
