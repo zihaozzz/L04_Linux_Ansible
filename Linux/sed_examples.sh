@@ -10,15 +10,15 @@ echo "#2"
 sed '2!s/Nick/John/' report.txt
 
 echo "#3"
-# Replace foo with bar only for the first instance in a line.
+# Replace foo with bar only for the first instance.
 sed 's/foo/bar/' report.txt
 
 echo "#4"
-# Replace foo with bar only for the 4th instance in a line.
+# Replace foo with bar only for the 2nd instance.
 sed 's/foo/bar/2' report.txt
 
 echo "#5"
-# Replace foo with bar only for all instances in a line.
+# Replace foo with bar for all instances.
 sed 's/foo/bar/g' report.txt
 
 echo "#6"
@@ -44,7 +44,7 @@ sed 'G;G' report.txt
 echo " ------------- Show -------------- "
 echo "#1"
 # Display only one paragraph, starting with No one and ending with lives
-sed -n '/^No one/,/lives/p' report.txt
+sed -n '/^Nick/,/lives/p' report.txt
 
 echo "#2"
 # Only take the 2nd and the 3rd line.
