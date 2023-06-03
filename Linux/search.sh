@@ -30,13 +30,14 @@ grep -i -r "find" .
 echo "#2 Of course, you can search for the word 'find' in a length file"
 grep find search.sh
 
-echo "#3 filter a length output from the previous output"
+echo "#3 Search for the word 'find' in a length file without echo"
+grep find search.sh | grep -v echo
+
+echo "#4 filter a length output from the previous output"
 ls /usr/lib | grep "ssh"
 
-echo "#4 what processes do docker run?"
+echo "#5 what processes do docker run?"
 ps aux | grep docker
 
-echo "#5 let us checkout the command history and find out how did we use bash"
+echo "#6 let us checkout the command history and find out how did we use bash"
 history | grep "bash"
-
-
