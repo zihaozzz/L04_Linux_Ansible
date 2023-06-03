@@ -43,7 +43,7 @@ sed 'G;G' report.txt
 
 echo " ------------- Show -------------- "
 echo "#1"
-# Display only one paragraph, starting with No one and ending with lives
+# Starting with Nick and ending with lives
 sed -n '/^Nick/,/lives/p' report.txt
 
 echo "#2"
@@ -55,7 +55,7 @@ echo "#3"
 sed 2,3d report.txt
 
 echo "#4"
-# Print only the first match of; RE (regular expression)
+# Print only the first match
 sed -n '/nick/{p;q;}' report.txt
 
 
