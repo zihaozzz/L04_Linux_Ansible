@@ -15,15 +15,20 @@ echo "#6 padding with zero"
 seq -w 96 101
 
 
-DURATION=4
+DURATION=2
 COUNT=1
-ATTEMPTS=40
-PROFILER_SH="/Applications/Docker.app/Contents/MacOS/com.docker.supervisor"
-while [ $COUNT -lt $ATTEMPTS ] && [ -n "$(pgrep -f "${PROFILER_SH}")" ]; do
-    echo "Waiting ${DURATION} seconds for process ${PROFILER_SH} to complete. This is attempt number $((COUNT))"
+ATTEMPTS=5
+while [ $COUNT -lt $ATTEMPTS ]; do
+    echo "Waiting ${DURATION} seconds for process to complete. This is while loop attempt number $((COUNT))"
     sleep "$DURATION"
     COUNT=$((COUNT+1))
 done
 
-echo "Exited the loop"
+FILES=$(ls -la | awk '{print $9}' | grep -v "\.$")
+F_COUNT=0
+for f in $FILES; do
+    F_COUNT=$((F_COUNT+1))
+    echo "File No.$F_COUNT in for loop: $f"
+    sleep 1
+done
 
