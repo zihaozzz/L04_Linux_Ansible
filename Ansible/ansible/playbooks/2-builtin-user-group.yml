@@ -9,12 +9,13 @@
         name: devops
         state: present
 
-    # - name: Ensure group "docker" exists
-    #   ansible.builtin.group:
-    #     name: docker
-    #     state: absent
+    - name: Remove group "docker"
+      ansible.builtin.group:
+        name: docker
+        state: absent
 
-    - name: Add the user 'zhangsan' with a bash shell, appending the group 'devops'to the user's groups
+    - name: Add the user 'zhangsan' with a bash shell
+    # appending the group 'devops'to the user's groups
       ansible.builtin.user:
         name: zhangsan
         shell: /bin/bash
