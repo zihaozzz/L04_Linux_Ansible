@@ -1,0 +1,14 @@
+---
+- hosts: example
+  user: ubuntu
+  tasks:
+    - name: Change the working directory to ansible/2 and create the file 2.txt if not exists
+      ansible.builtin.command: echo "Hello world"
+      args:
+        chdir: /home/ubuntu/ansible/2/
+
+    # You can also use the 'cmd' parameter instead of free form format.
+    - name: This command will change the working directory to /home/ubuntu/ansible
+      ansible.builtin.shell:
+        cmd: ls -la
+        chdir: /home/ubuntu/ansible
